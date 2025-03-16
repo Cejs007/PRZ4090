@@ -23,3 +23,12 @@ print(vizitka_slovnik["prace"])
 populace = {"Praha":1100000, "Brno": 450000, "Ostrava": 350000}
 mesto = "Brno"
 print(f"Populace města '{mesto}' je {populace[mesto]}.")
+populace["Olomouc"] = 90000
+populace["Krnov"] = 24000
+print(populace)
+del populace["Krnov"]
+print(populace)
+populace.pop("Olomouc")
+print(populace)
+print(populace.items())
+print(populace.get("Tábor"))
