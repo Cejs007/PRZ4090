@@ -1,0 +1,26 @@
+# chceme oddělit datové sloupce -> přípona _sys nebo předpona "_" znamená systémové sloupce
+sloupce = ["a", "b", "neco_sys", "dalsi_sys", "_neco", "_dalsi", "c", "a_sys_zajimavy"]
+
+# klasicky přes smyčku
+datove_sloupce = []
+for sloupec in sloupce:
+    if sloupec.endswith("_sys"):
+        continue
+    if sloupec[0] == "_":
+        continue
+    datove_sloupce.append(sloupec)
+
+print(datove_sloupce)
+
+# list comprehension
+zajimave_sloupce = [sloupec for sloupec in sloupce if not sloupec.endswith("_sys") and not sloupec[0] == "_"]
+print(zajimave_sloupce)
+
+# dictionary comprehension
+krizova_cisla = {"policie": 158,
+                 "hasici": 150,
+                 "zachranka": 155,
+                 "obecna": 112}
+
+krizova_cislo_naruby = {cislo: sluzba for sluzba, cislo in krizova_cisla.items()}
+print(krizova_cislo_naruby[150])
