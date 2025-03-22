@@ -1,3 +1,12 @@
+if "michal": # Python provede bool() -> převede na boolean, aby mohl vyhodnotit if podmínku
+    print("True")
+else:
+    print("False")
+
+# string -> boolean - "" == False, cokoliv ve stringu == True
+# čísla -> boolean - 0 == False, není nula == True
+# list -> booleam - [] == False (prázdný list), cokoliv v listu == True
+
 # samozřejmě Python umí pracovat s daty -> místo int, float použijeme datetime formát
 from datetime import datetime
 print(datetime.now())
