@@ -35,3 +35,38 @@ def vyhodnot_zkousku(body: int, kriterium=50) -> None:
         print(f"Neúspěch, '{body}' nestačí, limit byl {kriterium} bodů.")
 
 vyhodnot_zkousku(body[0], 70)
+
+print("---------------------------------")
+# libovolný počet argumentů
+
+def secti_vse(*args):
+    '''
+    Sečte všechny vstupní argumenty (libovolný počet) pomocí + operátoru.
+    '''
+    if isinstance(args[0], str):
+        zaklad = ""
+    else:
+        zaklad = 0
+
+    for prvek in args:
+        zaklad += prvek
+    return zaklad
+
+print(secti_vse(1, 2, 5, 9, 10, 13))
+
+print(secti_vse("Ahoj", "Michale"))
+
+def posbirej_argumenty(**kwargs):
+    for nazev, hodnota in kwargs.items():
+        print(f"Pod klíčem '{nazev}' je hodnota '{hodnota}'.")
+    return kwargs
+
+print(posbirej_argumenty(pes="Marw", dite="Vilém", ja="Michal"))
+
+
+def prevezmi_vse(jmeno, bydliste="ČR", *args, **kwargs):
+    print(jmeno, bydliste)
+    print(args)
+    print(kwargs)
+
+prevezmi_vse("Michal", "Karibik", 13, "Liverpool", pes="Marw", jidlo="kanec")
