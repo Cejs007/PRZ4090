@@ -1,0 +1,15 @@
+from fronta import Fronta
+
+lednicka = Fronta(6, "lednička")
+lednicka.zobraz()
+lednicka.zaskladni("mléko")
+lednicka.zobraz()
+lednicka.zaskladni("máslo")
+lednicka.zaskladni("sýr")
+lednicka.zaskladni("yogurt")
+lednicka.zaskladni("hovězí")
+lednicka.zaskladni("cola")
+lednicka.zaskladni("vývar")
+lednicka.zobraz()
+lednicka.hromadne_vyskladni(4)
+lednicka.zobraz()
