@@ -1,0 +1,17 @@
+[
+    {
+        "destinace": "Karibik",
+        "termín": "leden",
+        "cena": "70000"
+    },
+    {
+        "destinace": "Egypt",
+        "termín": "prosinec",
+        "cena": "25000"
+    },
+    {
+        "destinace": "Kalifornie",
+        "termín": "březen",
+        "cena": "65000"
+    }
+]
